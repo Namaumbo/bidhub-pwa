@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--bg-light);
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md);
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  height: calc(64px + env(safe-area-inset-bottom));
+  background-color: var(--card-light);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 1000;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 500;
+  gap: 3px;
+  flex: 1;
+  padding: 8px 0;
+  transition: color var(--transition);
+  position: relative;
+}
+
+.active {
+  composes: navItem;
+  color: var(--primary);
+}
+
+.active span {
+  font-weight: 700;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.sellNavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  gap: 3px;
+  flex: 1;
+  margin-top: -20px;
+}
+
+.sellNavItem span {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.sellNavItem.activeSell span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.sellBtn {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+  min-height: unset;
+  transition: transform var(--transition), box-shadow var(--transition) !important;
+}
+
+.sellBtn:active {
+  transform: scale(0.93) !important;
+  box-shadow: 0 2px 8px rgba(204,85,0,0.25) !important;
+}
+
+.sellBtnActive {
+  composes: sellBtn;
+  box-shadow: 0 4px 20px rgba(204,85,0,0.5);
+}
+
+.sellBtnInert {
+  width: 52px;
+  height: 52px;
+}

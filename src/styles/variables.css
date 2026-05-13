@@ -1,0 +1,116 @@
+:root {
+  /* African-inspired Warm Palette */
+  --primary: #CC5500;
+  --primary-dark: #A34400;
+  --primary-light: #FF6B1A;
+  --primary-gradient: linear-gradient(135deg, #CC5500 0%, #E8691F 100%);
+  --secondary: #CC7722;
+  --accent: #4F7942;
+  --error: #D32F2F;
+  --success: #388E3C;
+
+  /* Backgrounds */
+  --bg-light: #F7F5F2;
+  --card-light: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B6B6B;
+  --border: #E8E8E8;
+
+  /* Spacing & Borders */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --touch-target: 48px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.04);
+  --shadow-primary: 0 4px 16px rgba(204,85,0,0.35);
+
+  /* Transitions */
+  --transition: 0.18s ease;
+  --transition-slow: 0.3s ease;
+}
+
+[data-theme='dark'] {
+  --bg-light: #111111;
+  --card-light: #1C1C1E;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A0A0A0;
+  --border: #2C2C2E;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  min-height: var(--touch-target);
+  border: none;
+  background: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+button:active {
+  opacity: 0.8;
+  transform: scale(0.97);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out forwards;
+}

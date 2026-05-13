@@ -1,0 +1,232 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.backBtn {
+  align-self: flex-start;
+  min-height: unset;
+  width: 38px;
+  height: 38px;
+  background: var(--card-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.requestCard {
+  background: var(--card-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.requestImg {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.requestInfo {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.requestTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.requestDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.requestMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.budget {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.bidsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.bidsTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.acceptedBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: rgba(39,174,96,0.1);
+  color: #27AE60;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.emptyBids {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.emptyBidsSub {
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+.bidList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.bidCard {
+  background: var(--card-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  transition: border-color var(--transition);
+}
+
+.bidAccepted {
+  border-color: #27AE60;
+}
+
+.bidDeclined {
+  opacity: 0.55;
+}
+
+.bidHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sellerInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.sellerAvatar {
+  width: 38px;
+  height: 38px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.sellerName {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  color: #F59E0B;
+  font-weight: 600;
+}
+
+.bidPrice {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.3px;
+}
+
+.bidDesc {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.bidActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.acceptBtn, .declineBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-height: unset;
+}
+
+.acceptBtn {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: var(--shadow-primary);
+}
+
+.declineBtn {
+  background: rgba(211,47,47,0.08);
+  color: var(--error);
+  border: 1.5px solid rgba(211,47,47,0.2);
+}
+
+.statusTag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
