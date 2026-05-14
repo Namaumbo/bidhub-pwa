@@ -20,7 +20,7 @@ import SellerMapView from './features/buyer/SellerMapView';
 // import RequestDetail from './features/seller/RequestDetail';
 
 function App() {
-  const { user, role, setUser, setLoading, loading } = useAuthStore();
+  const { setUser, setLoading, loading } = useAuthStore();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
