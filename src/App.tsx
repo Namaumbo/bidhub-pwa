@@ -4,7 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './services/firebase';
 import { useAuthStore } from './store/authStore';
 import Layout from './features/layout/Layout';
-import AuthFlow from './features/auth/AuthFlow';
+// import AuthFlow from './features/auth/AuthFlow';
 import Messages from './features/messages/Messages';
 import Profile from './features/profile/Profile';
 
