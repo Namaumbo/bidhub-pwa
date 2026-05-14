@@ -15,9 +15,9 @@ import BuyerBids from './features/buyer/BuyerBids';
 import SellerMapView from './features/buyer/SellerMapView';
 
 // Seller screens
-import SellerBrowse from './features/seller/SellerBrowse';
-import SellerBids from './features/seller/SellerBids';
-import RequestDetail from './features/seller/RequestDetail';
+// import SellerBrowse from './features/seller/SellerBrowse';
+// import SellerBids from './features/seller/SellerBids';
+// import RequestDetail from './features/seller/RequestDetail';
 
 function App() {
   const { user, role, setUser, setLoading, loading } = useAuthStore();
