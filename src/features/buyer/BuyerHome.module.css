@@ -217,6 +217,25 @@
   color: var(--text-secondary);
 }
 
+.bidRowActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.mapBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(79, 121, 66, 0.1);
+  padding: 5px 9px;
+  border-radius: var(--radius-full);
+  min-height: unset;
+}
+
 .viewBids {
   display: flex;
   align-items: center;

@@ -12,6 +12,7 @@ import Profile from './features/profile/Profile';
 import BuyerHome from './features/buyer/BuyerHome';
 import PostRequest from './features/buyer/PostRequest';
 import BuyerBids from './features/buyer/BuyerBids';
+import SellerMapView from './features/buyer/SellerMapView';
 
 // Seller screens
 import SellerBrowse from './features/seller/SellerBrowse';
@@ -48,30 +49,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        {!user ? (
-          <Route path="*" element={<AuthFlow />} />
-        ) : role === 'buyer' ? (
-          <Route element={<Layout role="buyer" />}>
+      <Route element={<Layout role="buyer" />}>
             <Route path="/" element={<BuyerHome />} />
             <Route path="/post-request" element={<PostRequest />} />
             <Route path="/bids/:requestId" element={<BuyerBids />} />
+            <Route path="/sellers-map/:requestId" element={<SellerMapView />} />
             <Route path="/bids-overview" element={<BuyerHome />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
-        ) : role === 'seller' ? (
-          <Route element={<Layout role="seller" />}>
-            <Route path="/" element={<SellerBrowse />} />
-            <Route path="/request/:requestId" element={<RequestDetail />} />
-            <Route path="/my-bids" element={<SellerBids />} />
-            <Route path="/messages" element={<Messages />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Route>
-        ) : (
-          <Route path="*" element={<AuthFlow />} />
-        )}
       </Routes>
     </Router>
   );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { ClipboardList, ChevronRight, MapPin, Bell } from 'lucide-react';
+import { ClipboardList, ChevronRight, MapPin, Bell, Map } from 'lucide-react';
 import { MOCK_REQUESTS } from '../../services/mockData';
 import { useAuthStore } from '../../store/authStore';
 import type { BuyerRequest } from '../../models/Request';
@@ -86,8 +86,17 @@ const BuyerHome = () => {
                     <span className={styles.bidCount}>
                       {req.bidCount} {req.bidCount === 1 ? t('bid_count_singular') : t('bids_count')} received
                     </span>
-                    <div className={styles.viewBids}>
-                      View bids <ChevronRight size={14} />
+                    <div className={styles.bidRowActions}>
+                      <button
+                        className={styles.mapBtn}
+                        onClick={(e) => { e.stopPropagation(); navigate(`/sellers-map/${req.id}`); }}
+                      >
+                        <Map size={13} />
+                        Nearby
+                      </button>
+                      <div className={styles.viewBids}>
+                        View bids <ChevronRight size={14} />
+                      </div>
                     </div>
                   </div>
                 </div>
